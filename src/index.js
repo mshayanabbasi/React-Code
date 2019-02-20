@@ -5,10 +5,14 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 // import Greeting from './LoginControl/Greeting'
 import LoginControl from './LoginControl/LoginControl'
+import MailBox from './LoginControl/MailBox'
+import messages from './LoginControl/MailBox'
 
 // ReactDOM.render(<App/>, document.getElementById('root'));
 // ReactDOM.render(<Greeting isLoggedIn={true}/>, document.getElementById('root'));
-ReactDOM.render(<LoginControl />, document.getElementById('root'));
+// ReactDOM.render(<LoginControl />, document.getElementById('root'));
+ReactDOM.render(<MailBox unreadmessages={messages}/>, document.getElementById('root'));
+
 
 
 // If you want your app to work offline and load faster, you can change
