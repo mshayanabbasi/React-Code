@@ -8,9 +8,9 @@ class App extends Component {
   }
   state = {
     persons : [
-      {name: 'Max', age: 28},
-      {name: 'Manu', age: 29},
-      {name: 'Stephanie', age:26}
+      {id:'1' ,name: 'Max', age: 28},
+      {id:'2', name: 'Manu', age: 29},
+      {id:'3', name: 'Stephanie', age:26}
     ],
     otherState : 'some other value',
     showPersons: false
@@ -26,13 +26,25 @@ class App extends Component {
       ]
     })
   }
-  changeNameHandler = (event) => {
+  deletePersonHandler = (personIndex) => {
+    // const persons = this.state.persons.slice()
+    const persons = [...this.state.persons]
+    persons.splice(personIndex, 1)
+    this.setState({persons: persons})
+  }
+  changeNameHandler = (event, id) => {
+    const personIndex = this.state.persons.findIndex(p => {
+      return p.id === id;
+    })
+    const person ={
+      ...this.state.persons[personIndex]
+    }
+    // const person = Object.assign({}, this.state.persons[personIndex])
+    person.name = event.target.value
+    const persons = [...this.state.persons]
+    persons[personIndex] = person
     this.setState({
-      persons: [
-        {name: 'Max', age:28},
-        {name: event.target.value, age: 29},
-        {name: 'Stephanie', age:27}
-      ]
+      persons: persons
     })  }
 
     togglePersonHandler =() => {
@@ -75,19 +87,22 @@ class App extends Component {
       persons = 
          ( 
          <div>
-              {this.state.persons.map(person =>{
+              {this.state.persons.map((person,index) =>{
                 return <Person
+                click={() => this.deletePersonHandler(index)}
                 name={person.name}
-                age={person.age}/>
+                age={person.age}
+                key={person.id}
+                change= {(event)=> this.changeNameHandler(event, person.id)}/>
               })}
           </div>
          )
     }
     return (
-      // <div>
-      //    <button onClick={this.switchCounterHandler}>Count</button>
-      //     <p>{this.state.counter}</p>
-      // </div>
+      <div>
+         <button onClick={this.switchCounterHandler}>Count</button>
+          <p>{this.state.counter}</p>
+      </div>
 
       <div className="App">
         <h1>Hi, I am React App</h1>
@@ -116,7 +131,7 @@ class App extends Component {
                 name={this.state.persons[2].name} 
                 age={this.state.persons[2].age}/>
             </div> : null
-        }
+        } */}
 
 
         
