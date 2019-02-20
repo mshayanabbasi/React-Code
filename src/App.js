@@ -138,7 +138,7 @@ class App extends Component {
         <Person title="My First Post"></Person>
       </div>
     );
-    // return React.createElement('div', {className: 'App'}, React.createElement('h1',null, 'Hi I am React App'))
+    return React.createElement('div', {className: 'App'}, React.createElement('h1',null, 'Hi I am React App'))
   }
 }
 
