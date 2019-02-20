@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Greeting from './Greeting/Geeting'
+// import Greeting from './LoginControl/Greeting'
+import LoginControl from './LoginControl/LoginControl'
 
 // ReactDOM.render(<App/>, document.getElementById('root'));
-ReactDOM.render(<Greeting isLoggedIn={true}/>, document.getElementById('root'));
+// ReactDOM.render(<Greeting isLoggedIn={true}/>, document.getElementById('root'));
+ReactDOM.render(<LoginControl />, document.getElementById('root'));
 
 
 // If you want your app to work offline and load faster, you can change
