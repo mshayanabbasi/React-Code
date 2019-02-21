@@ -7,7 +7,7 @@
 6 silly lifecycle react-complete-guide@0.1.0~preeject: no script for preeject, continuing
 7 info lifecycle react-complete-guide@0.1.0~eject: react-complete-guide@0.1.0
 8 verbose lifecycle react-complete-guide@0.1.0~eject: unsafe-perm in lifecycle true
-9 verbose lifecycle react-complete-guide@0.1.0~eject: PATH: /usr/share/npm/bin/node-gyp-bin:/home/shayan/App/react-complete-guide/node_modules/.bin:/home/shayan/anaconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+9 verbose lifecycle react-complete-guide@0.1.0~eject: PATH: /usr/share/npm/bin/node-gyp-bin:/home/shayan/App/react-complete-guide/node_modules/.bin:/home/shayan/anaconda3/bin:/home/shayan/anaconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
 10 verbose lifecycle react-complete-guide@0.1.0~eject: CWD: /home/shayan/App/react-complete-guide
 11 silly lifecycle react-complete-guide@0.1.0~eject: Args: [ '-c', 'react-scripts eject' ]
 12 silly lifecycle react-complete-guide@0.1.0~eject: Returned: code: 1  signal: null
