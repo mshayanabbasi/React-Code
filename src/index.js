@@ -9,7 +9,7 @@ import * as serviceWorker from './serviceWorker';
 // import messages from './LoginControl/MailBox'
 // import Page from './LoginControl/Page'
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 // ReactDOM.render(<Greeting isLoggedIn={true}/>, document.getElementById('root'));
 // ReactDOM.render(<LoginControl />, document.getElementById('root'));
 // ReactDOM.render(<MailBox unreadmessages={messages}/>, document.getElementById('root'));
