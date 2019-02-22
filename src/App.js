@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
+import  './App.css';
 import Person from './Person/Person'
+import ErrorBoundary from './ErrorBoundary/ErrorBoundary'
 
 class App extends Component {
   // state = {
@@ -32,20 +33,24 @@ class App extends Component {
     persons.splice(personIndex, 1)
     this.setState({persons: persons})
   }
-  changeNameHandler = (event, id) => {
-    const personIndex = this.state.persons.findIndex(p => {
+  nameChangedHandler = ( event, id ) => {
+    const personIndex = this.state.persons.findIndex( p => {
       return p.id === id;
-    })
-    const person ={
+    } );
+
+    const person = {
       ...this.state.persons[personIndex]
-    }
-    // const person = Object.assign({}, this.state.persons[personIndex])
-    person.name = event.target.value
-    const persons = [...this.state.persons]
-    persons[personIndex] = person
-    this.setState({
-      persons: persons
-    })  }
+    };
+
+    // const person = Object.assign({}, this.state.persons[personIndex]);
+
+    person.name = event.target.value;
+
+    const persons = [...this.state.persons];
+    persons[personIndex] = person;
+
+    this.setState( { persons: persons } );
+  }
 
     togglePersonHandler =() => {
       const doesShow = this.state.showPersons
@@ -89,12 +94,13 @@ class App extends Component {
          ( 
          <div>
               {this.state.persons.map((person,index) =>{
-                return <Person
+                return <ErrorBoundary key={person.id}>
+                   <Person
                 click={() => this.deletePersonHandler(index)}
                 name={person.name}
                 age={person.age}
-                key={person.id}
-                changed = {(event)=> this.changeNameHandler(event, person.id)}/>
+                changed = {(event)=> this.nameChangedHandler(event, person.id)}/>
+                </ErrorBoundary>
               })}
           </div>
          )
