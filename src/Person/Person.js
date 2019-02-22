@@ -2,13 +2,16 @@ import React from 'react'
 import './Person.css'
 
 const person = (props) => {
-    
-    
+    const rnd = Math.random()
+    console.log(rnd)
+    if(rnd > 0.7){
+        throw new Error('Something went wrong')
+    }
     return (
-        <div className='Person' >
+        <div className='Person'>
             <p onClick={props.click} >I'm a {props.name} and I am {props.age} years old!</p>
             <p>{props.children}</p>
-            <input type="text" onChange={props.change} value={props.name} />
+            <input type="text" onChange={props.changed} value={props.name} />
             {/* <p>{props.title}</p> */}
 
         </div>
