@@ -1,0 +1,35 @@
+What is React? 
+
+React is a javascript library for building UI
+
+React app run in the browser don't run on the server
+
+React is a component
+
+Props is outside of the component
+
+State is inside of the component
+
+Component LifeCycle
+
+1. Only available in stateful components
+
+2. constructor()
+
+3. componentWillMount()
+
+4. componentDidMount()
+
+5. componentWillReceiveProps()
+
+6. componentWillUpdate()
+
+7. componentDidUpdate()
+
+8. componentDidCatch()
+
+9. shouldComponentUpdate()
+
+10. componentWillUmount()
+
+11. render()
