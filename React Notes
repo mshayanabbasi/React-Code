@@ -33,3 +33,7 @@ Component LifeCycle
 10. componentWillUmount()
 
 11. render()
+React is composition Model
+React Declarative nature
+The Way data flow through a component
+And the react is really just Javascript
