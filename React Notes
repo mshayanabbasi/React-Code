@@ -37,3 +37,7 @@ React is composition Model
 React Declarative nature
 The Way data flow through a component
 And the react is really just Javascript
+
+What is the “Virtual DOM”?
+
+The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM. This process is called reconciliation. ... They may also be considered a part of “virtual DOM” implementation in React.
