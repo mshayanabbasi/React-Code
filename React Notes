@@ -41,3 +41,8 @@ And the react is really just Javascript
 What is the “Virtual DOM”?
 
 The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM. This process is called reconciliation. ... They may also be considered a part of “virtual DOM” implementation in React.
+
+Explain what makes React performant.
+
+In React every UI piece is a component, and each component has a state. React follows the observable pattern and listens for state changes. When the state of a component changes, React updates the virtual DOM tree. ... This makes React standout as a high performance JavaScript library.
+
