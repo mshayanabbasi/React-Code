@@ -46,3 +46,15 @@ Explain what makes React performant.
 
 In React every UI piece is a component, and each component has a state. React follows the observable pattern and listens for state changes. When the state of a component changes, React updates the virtual DOM tree. ... This makes React standout as a high performance JavaScript library.
 
+Props
+
+allow you to pass data into your components
+
+Functional Components
+
+An alternative, and probably more intuitive approach to creating components
+
+Controlled Components
+
+Allow you to hook up the forms in your application to your components
+
