@@ -30,7 +30,18 @@ class App extends Component {
           Toggle
           </button>
           <br />
-          <Transition in={this.state.showBlock} timeout={1000} unmountOnExit mountOnEnter>
+          <Transition 
+            in={this.state.showBlock} 
+            timeout={1000} 
+            unmountOnExit 
+            mountOnEnter
+            onEnter={() => console.log('onEnter')}
+            onEntering={() => console.log('onEntering')}
+            onEntered={() => console.log('onEntered')}
+            onExit={() => console.log('onExit')}
+            onExiting={() => console.log('onExiting')}
+            onExited={() => console.log('onExited')}
+          >
             {state => (  
               <div style={{
               backgroundColor: 'red',
@@ -41,9 +52,7 @@ class App extends Component {
               opacity: state === 'exiting' ? 0 : 1
             }} /> ) }
           </Transition>
-        {this.state.modalIsOpen ? 
-        <Modal show={this.state.modalIsOpen} closed={this.closedModal}/> : null
-        }
+          <Modal show={this.state.modalIsOpen} closed={this.closedModal}/>
         {this.state.modalIsOpen ?  <Backdrop show={this.state.modalIsOpen} /> : null}
         <button className="Button" onClick={this.showModal}>Open Modal</button>
         <h3>Animating Lists</h3>
