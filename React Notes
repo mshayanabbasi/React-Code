@@ -58,3 +58,10 @@ Controlled Components
 
 Allow you to hook up the forms in your application to your components
 
+We can assemble different JSX elements like normal HTML
+
+We configure different JSX elements using props
+
+We can refer to JS variables inside of JSX block by using curly braces
+
+We can assign JSX elements to a variable elements to a variable, then show that variable inside of a JSX block.
